@@ -7,8 +7,6 @@ class CustomerAdmin(admin.ModelAdmin):
     list_filter = ["first_name", "last_name"]
     readonly_fields = ["account"]
 
-    prepopulated_fields = {"slug":["first_name", "last_name"]}
-
 admin.site.register(Customer, CustomerAdmin)
 admin.site.register(Bill)
 admin.site.register(Product)
